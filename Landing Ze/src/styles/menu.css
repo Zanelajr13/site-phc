@@ -1,0 +1,238 @@
+/*menu de serviços*/
+
+#menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 8%;
+  width: 100%;
+}
+
+#servicos {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  max-width: 100%;
+  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+  margin-top: 32px;
+  align-items: center;
+  color: #ffd500;
+  text-align: center;
+}
+
+.servico {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  gap: 15px;
+  width: 30%;
+  padding: 20px;
+  box-shadow: 0px 0px 12px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.servico p {
+  line-height: 1.4; /* melhora leitura */
+  font-size: 1rem; /* tamanho confortável */
+  text-align: justify; /* texto alinhado melhor */
+}
+
+.servicos-container {
+  display: flex;
+  gap: 24px;
+}
+
+.servico:hover {
+  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+}
+
+.projeto-image {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+}
+
+/*menu de projetos*/
+
+.projeto-title {
+  margin-top: 12px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  color: #ffd500;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+  color: var(--color-primary-6); /* Cor para o subtítulo */
+}
+
+#projetos {
+  width: 100%;
+  padding: 40px 8%;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-subtitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd500;
+}
+
+.projetos-wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+.projetos-container {
+  display: flex;
+  width: fit-content;
+  animation: scrollProjetos 30s linear infinite;
+}
+
+.projeto {
+  flex: 0 0 auto;
+  width: 350px;
+  margin-right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.projeto img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/*menu de apresentação*/
+
+#apresentacao {
+  width: 100%;
+
+  padding: 60px 8%;
+}
+
+.apresentacao-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.apresentacao-texto {
+  flex: 1;
+  min-width: 300px;
+}
+
+.apresentacao-texto .section-subtitle {
+  font-size: 2rem;
+  color: #ffd500;
+
+  margin-bottom: 20px;
+}
+
+.apresentacao-texto .description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #ffd500;
+}
+
+.apresentacao-img {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.apresentacao-img img {
+  max-width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  height: auto;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.selo-credencial {
+  width: 85px; /* ajuste o tamanho como preferir */
+  height: auto;
+  display: block;
+  margin: 0 auto; /* centraliza se quiser no meio */
+}
+
+/*responsividades/*
+
+
+
+
+
+/* Animação infinita de rolagem */
+@keyframes scrollProjetos {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-5%);
+  }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .projeto {
+    width: 80vw;
+  }
+
+  .projeto img {
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  #servicos {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .servico {
+    width: calc(50% - 12px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .servico {
+    width: 100%;
+  }
+
+  #menu .section-subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  #projetos {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsividade para ajustar o tamanho do carrossel em telas menores */
+@media screen and (max-width: 768px) {
+  .projeto img {
+    max-height: 400px; /* Ajuste da altura das imagens em telas menores */
+  }
+}

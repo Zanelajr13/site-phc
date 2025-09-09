@@ -1,0 +1,223 @@
+#home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100vh;
+  position: relative;
+  background-image: url("../images/banner-energia.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 40px;
+}
+
+#cta {
+  width: 35%; /* Ajuste conforme necessário */
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente */
+  height: 50vh; /* Altura total da tela */
+  text-align: center;
+  padding: 0 20px;
+  margin: 0 auto; /* Centraliza o CTA horizontalmente */
+}
+
+#cta .title {
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  color: var(--color-primary-4);
+  font-weight: bold;
+  line-height: 1.1;
+  text-align: center;
+  white-space: normal; /* Permite quebra se for necessário */
+  max-width: 100%;
+}
+
+#cta .title span {
+  color: var(--color-primary-6);
+  white-space: nowrap; /* Garante que "ENERGIA SOLAR" fique na mesma linha */
+}
+
+/* Descrição escala entre 1rem e 1.2rem */
+#cta .description {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: var(--color-neutral-1);
+  text-align: center;
+}
+
+/* Botões de ação */
+#cta_buttons {
+  display: flex;
+  gap: 24px;
+  justify-content: center; /* Centraliza os botões */
+}
+
+/* Mantém o overlay lateral */
+#form-solar {
+  position: fixed;
+  top: 0;
+  right: -100%; /* começa fora da tela */
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: right 0.4s ease;
+  z-index: 9999;
+}
+
+#form-solar.ativo {
+  right: 0;
+}
+
+/* Container do iframe (como se fosse a caixa do form) */
+#form-solar .iframe-container {
+  background-color: #fff;
+  padding: 0;
+  border-radius: 12px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 380px; /* igual ao form */
+  height: 90vh; /* altura dentro do overlay */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* O iframe ocupa todo espaço do container */
+#form-solar iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+/* Inputs e botão (como já estava) */
+#form-solar input,
+#form-solar select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#form-solar label {
+  font-weight: bold;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+#form-solar .btn-default {
+  background-color: var(--color-primary-6, #0072ff);
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#form-solar input,
+#form-solar select {
+  width: 100%;
+  padding: 14px;
+  font-size: 1 rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+#form-solar label {
+  font-weight: bold;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+#form-solar .btn-default {
+  background-color: var(--color-primary-6);
+  color: #ffffff;
+  padding: 14px;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Link que rola até o formulário */
+#cta_buttons .scroll-to-form {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--color-primary-6);
+  color: #fff;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 16px;
+}
+#cta_buttons .scroll-to-form:hover {
+  background-color: var(--color-primary-4);
+}
+
+#phone_button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 8px 14px;
+  background-color: #08ce22;
+  font-weight: 500;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+}
+#phone_button button {
+  box-shadow: none;
+}
+
+/* Oculta banner e shape em tablets e mobile */
+@media screen and (max-width: 1170px) {
+  #home {
+    min-height: auto;
+    padding-top: 20px;
+    flex-direction: column;
+  }
+  #banner,
+  #form-solar,
+  #home .shape {
+    display: none;
+  }
+  #cta {
+    width: 100%;
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  #phone_button {
+    font-size: 0.9rem;
+  }
+}
+
+/* 3) Em telas bem estreitas, empilhar ícone + número */
+@media (max-width: 450px) {
+  #phone_button {
+    flex-direction: column;
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Ajuste extra em telas bem pequenas */
+@media screen and (max-width: 450px) {
+  #phone_button button {
+    display: none;
+  }
+}

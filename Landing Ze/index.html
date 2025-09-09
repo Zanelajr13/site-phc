@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="src/styles/styles.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    <title>PHC ENERGIA SOLAR</title>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <a href="#home" id="nav_logo">
+                <img src="src/images/COLORIDA - HORIZONTAL.png" alt="nav_logo" style="height: 65px;">
+            </a>
+
+            <ul id="nav_list">
+                <li class="nav-item">
+                    <a href="#home">INÍCIO</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#servicos">SERVIÇOS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#projetos">PROJETOS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#apresentacao">QUEM SOMOS</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#testimonials">AVALIAÇÕES</a>
+                </li>
+            </ul>
+
+            <button id="abrirCalc" class="btn-default">
+                CALCULADORA DE CONSUMO
+            </button>
+
+            <button id="mobile_btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobile_menu">
+            <ul id="mobile_nav_list">
+                <li class="nav-item">
+                    <a href="#home">Início</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projetos">Projetos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#menu">Serviços</a>
+                </li>
+
+                <li class="nav-item">
+                    <a href="#testimonials">Avaliações</a>
+                </li>
+            </ul>
+
+            <button class="btn-default">
+                Orçamento
+            </button>
+        </div>
+    </header>
+
+    <main id="content">
+        <section id="home">
+
+            <div id="cta">
+                <h1 class="title">
+                    REDUZA ATÉ 90% DA SUA CONTA DE LUZ COM <span> ENERGIA SOLAR. </span>
+
+
+                </h1>
+                <a href="https://wa.me/5524993284440?text=Ol%C3%A1%2C%20vim%20atrav%C3%A9s%20do%20site%20e%20gostaria%20de%20conhecer%20melhor%20a%20PHC."
+                    id="phone_button">
+                    FALE CONOSCO NO NOSSO WHATSAPP
+                </a>
+            </div>
+
+
+            </div>
+
+            <div id="form-solar">
+                <div class="iframe-container">
+                  <iframe 
+                    src="https://business.solarmarket.com.br/simulador-solar/ed6aae20-1255-453f-a256-f2ab97c5b7ba"
+                    name="iframeSimulador"
+                    frameborder="0"
+                    allowfullscreen>
+                  </iframe>
+                </div>
+            </div>
+        </section>
+
+        <section id="menu">
+            <h3 class="section-subtitle">NOSSOS SERVIÇOS</h3>
+            <div class="servicos-container">
+                <div id="servicos">
+                    <div class="servico">
+
+                        <img src="src/images/ICONES/Instalação de Painéis Solares Fotovoltaicos.png"
+                            class="projeto-image" alt="">
+
+                        <h3 class="projeto-title">
+                            INSTALAÇÃO DE PAINEIS SOLARES FOTOVOLTATICOS
+                        </h3>
+
+                        <p class="description">
+                            Projetamos e instalamos sistemas solares completos para residências, comércios e áreas rurais. Reduza sua conta de luz com energia limpa e sustentável.
+                        </p>
+                    </div>
+                    <div class="servico">
+
+                        <img src="src/images/ICONES/Projeto, Homologação e Conexão com a Concessionária.png"
+                            class="projeto-image" alt="">
+
+                        <h3 class="projeto-title">
+                            PROJETO, HOMOLOGAÇÃO E CONEXÃO COM A CONCESSIONÁRIA
+                        </h3>
+
+                        <p class="description">
+                            Cuidamos de toda a parte técnica e burocrática: dimensionamento do sistema, ART, homologação junto à Light, ENEL, Energisa e Cemig.
+                        </p>
+
+                    </div>
+
+                    <div class="servico">
+
+                        <img src="src/images/ICONES/Limpeza e Manutenção de Placas Solares.png" class="projeto-image"
+                            alt="">
+
+                        <h3 class="projeto-title">
+                            LIMPEZA E MANUTENÇÃO DE PLACAS SOLARES
+                        </h3>
+
+                        <p class="description">
+                            Serviço especializado para manter o desempenho máximo do seu sistema fotovoltaico, cominspeção, testes e lavagem técnica.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projetos">
+            <h3 class="section-subtitle">PROJETOS</h3>
+
+            <div class="projetos-wrapper">
+                <div class="projetos-container">
+                    <!-- Lista de projetos (1ª repetição) -->
+                    <div class="projeto"><img src="src/images/projetos/fotos/1.png" alt="Projeto 1"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/2.png" alt="Projeto 2"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/3.png" alt="Projeto 3"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/4.png" alt="Projeto 4"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/5.png" alt="Projeto 5"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/6.png" alt="Projeto 6"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/7.png" alt="Projeto 7"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/8.png" alt="Projeto 8"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/9.png" alt="Projeto 9"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/10.png" alt="Projeto 10"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/11.png" alt="Projeto 11"></div>
+
+                    <!-- Duplicado (2ª repetição para rolagem infinita) -->
+                    <div class="projeto"><img src="src/images/projetos/fotos/1.png" alt="Projeto 1"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/2.png" alt="Projeto 2"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/3.png" alt="Projeto 3"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/4.png" alt="Projeto 4"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/5.png" alt="Projeto 5"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/6.png" alt="Projeto 6"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/7.png" alt="Projeto 7"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/8.png" alt="Projeto 8"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/9.png" alt="Projeto 9"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/10.png" alt="Projeto 10"></div>
+                    <div class="projeto"><img src="src/images/projetos/fotos/11.png" alt="Projeto 11"></div>
+
+                </div>
+            </div>
+        </section>
+        <section id="apresentacao">
+
+            <div class="apresentacao-container">
+
+                <div class="apresentacao-texto">
+                    <h3 class="section-subtitle">QUEM SOMOS</h3>
+                    <p class="description">
+                        A PHC Energia Solar está no mercado desde 2021 e é
+                        especializada em soluções completas de energia solar,
+                        desenvolvendo tecnologias de geração distribuída para
+                        residências, comércios, indústrias e o agronegócio.
+                    </p>
+                </div>
+
+                <div class="apresentacao-texto">
+                    <h3 class="section-subtitle">NOSSO PROPÓSITO</h3>
+                    <p class="description">
+                        Nossa missão é levar os benefícios da energia solar ao maior número de pessoas possível,
+                        promovendo
+                        economia, sustentabilidade e inovação. Nosso DNA é o compromisso de evoluir constantemente e
+                        entregar resultados reais para nossos clientes.
+                    </p>
+                </div>
+
+                <div class="apresentacao-texto">
+                    <h3 class="section-subtitle"><img src="src/images/ICONES/ibs.png" alt="Selo de Credencial" class="selo-credencial"></h3>
+                    <p class="description">
+                        Ser credenciado pela IBS é garantia de qualidade, segurança e inovação. Isso assegura que nossos
+                        projetos sigam os mais altos padrões do setor, oferecendo mais confiança, eficiência e retorno
+                        para o seu investimento em energia solar.
+                    </p>
+                </div>
+            </div>
+
+            <div class="apresentacao-img">
+            </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <img src="src/images/POST 4.png" id="testimonial_phc" alt="">
+
+            <div id="testimonials_content">
+
+
+                <h3 class="section-subtitle">
+                    O que os clientes falam sobre nós
+                </h3>
+
+                <div id="feedbacks">
+                    <div class="feedback">
+
+                        <div class="feedback-content">
+                            <p>
+                                Lilian Prata 
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Contratei a empresa para instalação de um sistema de energia solar e fiquei extremamente satisfeita com todo o atendimento! Desde o primeiro contato, foram muito profissionais, atenciosos e transparentes. O material chegou até bem antes do previsto e a equipe de instalação foi pontual, organizada e realizou um trabalho de ótima qualidade. Tudo foi entregue conforme combinado!"
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="feedback">
+
+                        <div class="feedback-content">
+                            <p>
+                                Renan Dos Santos Barreto
+                                <span>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </span>
+                            </p>
+                            <p>
+                                "Ótimo atendimento.Tirou todas a minhas duvidas relacionadas ao projeto,custo benefício,tempo de implementação e consumo de energia. Projeto foi implementado antes do prazo estimado.Profissionais super capacitados para resolver as questões extras que foram aparecendo na estrutura.A conta de luz tem sido sempre o valor mínimo,mesmo com adição de um ar condicionado.Sensacional,super indico."
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn-default">
+                    <a href="https://g.page/r/CV8EFZqGggfOEAI/review" target="_blank" class="btn-default">Ver mais avaliações</a>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <img src="src/images/wave.svg" alt="">
+
+        <div id="footer_items">
+            <span id="copyright">
+                &copy 2024 PHC ENERGIA SOLAR
+            </span>
+
+            <div class="social-media-buttons">
+                <a href="">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <script src="src/javascript/script.js"></script>
+</body>
+
+</html>

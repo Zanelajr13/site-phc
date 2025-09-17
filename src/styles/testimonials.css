@@ -63,10 +63,6 @@
     font-size: 2.5rem;
   }
 
-  #testimonial_chef {
-    display: none;
-  }
-
   #testimonials_content {
     width: 70%;
     display: flex;

@@ -57,11 +57,16 @@ $(document).ready(function () {
   // ===================== CALCULADORA =====================
   const $formulario = $("#form-solar");
 
-  $("#abrirCalc").on("click", function () {
-    $formulario.toggleClass("ativo");
+  // Abrir ao clicar em qualquer botão (desktop ou mobile)
+  $(document).on("click", "#abrirCalc, .abrirCalc", function (e) {
+    e.preventDefault();
+    $formulario.addClass("ativo");
+
+    // Se o menu mobile estiver aberto, fecha ele
+    $("#mobile_menu").removeClass("active");
   });
 
-  // Fecha calculadora ao clicar fora do iframe
+  // Fechar ao clicar fora do iframe
   $formulario.on("click", function (e) {
     if (!$(e.target).closest("iframe").length) {
       $formulario.removeClass("ativo");
@@ -93,31 +98,5 @@ $(document).ready(function () {
     origin: "right",
     duration: 1000,
     distance: "20%",
-  });
-
-  // ===================== CARREGAR CIDADES =====================
-  $("#uf").on("change", function () {
-    const uf = $(this).val();
-    const cidadeSelect = $("#cidade");
-    cidadeSelect.html('<option value="">Carregando cidades...</option>');
-
-    if (!uf) return;
-
-    fetch(
-      `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`
-    )
-      .then((response) => response.json())
-      .then((cidades) => {
-        cidadeSelect.html('<option value="">Selecione a cidade</option>');
-        cidades.forEach((cidade) => {
-          cidadeSelect.append(
-            `<option value="${cidade.nome}">${cidade.nome}</option>`
-          );
-        });
-      })
-      .catch((error) => {
-        cidadeSelect.html('<option value="">Erro ao carregar cidades</option>');
-        console.error("Erro ao carregar cidades:", error);
-      });
   });
 });

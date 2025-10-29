@@ -1,5 +1,4 @@
-/*menu de serviços*/
-
+/* ===================== MENU DE SERVIÇOS ===================== */
 #menu {
   display: flex;
   flex-direction: column;
@@ -15,7 +14,7 @@
   gap: 24px;
   flex-wrap: wrap;
   max-width: 100%;
-  width: 100%; /* Garantir que ocupe 100% da largura disponível */
+  width: 100%;
   margin-top: 32px;
   align-items: center;
   color: #ffd500;
@@ -37,9 +36,9 @@
 }
 
 .servico p {
-  line-height: 1.4; /* melhora leitura */
-  font-size: 1rem; /* tamanho confortável */
-  text-align: justify; /* texto alinhado melhor */
+  line-height: 1.4;
+  font-size: 1rem;
+  text-align: justify;
 }
 
 .servicos-container {
@@ -48,7 +47,7 @@
 }
 
 .servico:hover {
-  transform: scale(1.05); /* Efeito de aumento ao passar o mouse */
+  transform: scale(1.05);
 }
 
 .projeto-image {
@@ -59,28 +58,10 @@
   flex-shrink: 0;
 }
 
-/*menu de projetos*/
-
-.projeto-title {
-  margin-top: 12px;
-  font-size: 1.3rem;
-  font-weight: 600;
-  text-align: center;
-  color: #ffd500;
-}
-
-.section-subtitle {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 24px;
-  color: var(--color-primary-6); /* Cor para o subtítulo */
-}
-
+/* ===================== CARROSSEL DE PROJETOS ===================== */
 #projetos {
   width: 100%;
   padding: 40px 8%;
-  overflow: hidden;
-  position: relative;
 }
 
 .section-subtitle {
@@ -92,36 +73,42 @@
 
 .projetos-wrapper {
   width: 100%;
-  overflow: hidden;
+  overflow-x: auto; /* rolagem horizontal */
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 10px; /* espaço para scrollbar */
+  scrollbar-width: thin;
+}
+
+.projetos-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.projetos-wrapper::-webkit-scrollbar-thumb {
+  background-color: #ffd500;
+  border-radius: 4px;
 }
 
 .projetos-container {
-  display: flex;
-  width: fit-content;
-  animation: scrollProjetos 30s linear infinite;
+  display: inline-flex;
+  gap: 16px; /* espaçamento entre imagens */
 }
 
 .projeto {
   flex: 0 0 auto;
-  width: 350px;
-  margin-right: 24px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 250px; /* largura fixa das imagens */
 }
 
 .projeto img {
   width: 100%;
-  max-height: 500px;
+  height: 200px;
   object-fit: cover;
   border-radius: 12px;
 }
 
-/*menu de apresentação*/
-
+/* ===================== MENU DE APRESENTAÇÃO ===================== */
 #apresentacao {
   width: 100%;
-
   padding: 60px 8%;
 }
 
@@ -144,7 +131,6 @@
 .apresentacao-texto .section-subtitle {
   font-size: 2rem;
   color: #ffd500;
-
   margin-bottom: 20px;
 }
 
@@ -170,20 +156,16 @@
 }
 
 .selo-credencial {
-  width: 85px; /* ajuste o tamanho como preferir */
+  width: 85px;
   height: auto;
   display: block;
-  margin: 0 auto; /* centraliza se quiser no meio */
+  margin: 0 auto;
 }
 
+/* ===================== PARCEIROS ===================== */
 #parceiro {
   text-align: center;
   padding: 50px 0;
-}
-
-.section-subtitle {
-  font-size: 1.8rem;
-  margin-bottom: 30px;
 }
 
 .parceiros-wrapper {
@@ -195,12 +177,12 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px; /* espaçamento entre logos */
+  gap: 30px;
   max-width: 1000px;
 }
 
 .parceiro img {
-  width: 140px; /* controla o tamanho */
+  width: 140px;
   height: auto;
   object-fit: contain;
   transition: transform 0.3s ease, opacity 0.3s ease;
@@ -211,23 +193,7 @@
   opacity: 0.9;
 }
 
-/*responsividades/*
-
-
-
-
-
-/* Animação infinita de rolagem */
-@keyframes scrollProjetos {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-5%);
-  }
-}
-
-/* Responsivo */
+/* ===================== RESPONSIVIDADES ===================== */
 @media (max-width: 768px) {
   .projeto {
     width: 80vw;
@@ -235,6 +201,10 @@
 
   .projeto img {
     max-height: 400px;
+  }
+
+  #projetos {
+    padding: 20px 4%;
   }
 }
 
@@ -256,18 +226,5 @@
 
   #menu .section-subtitle {
     text-align: center;
-  }
-}
-
-@media (max-width: 768px) {
-  #projetos {
-    grid-template-columns: 1fr;
-  }
-}
-
-/* Responsividade para ajustar o tamanho do carrossel em telas menores */
-@media screen and (max-width: 768px) {
-  .projeto img {
-    max-height: 400px; /* Ajuste da altura das imagens em telas menores */
   }
 }

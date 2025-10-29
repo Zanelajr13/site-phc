@@ -19,6 +19,25 @@ $(document).ready(function () {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
   });
 
+  // ===================== CALCULADORA =====================
+  const $formulario = $("#form-solar");
+
+  // Abrir ao clicar em qualquer botão (desktop ou mobile)
+  $(document).on("click", "#abrirCalc, .abrirCalc", function (e) {
+    e.preventDefault();
+    $formulario.addClass("ativo");
+
+    // Se o menu mobile estiver aberto, fecha ele
+    $("#mobile_menu").removeClass("active");
+  });
+
+  // Fechar ao clicar fora do iframe
+  $formulario.on("click", function (e) {
+    if (!$(e.target).closest("iframe").length) {
+      $formulario.removeClass("ativo");
+    }
+  });
+
   // ===================== SCROLL SUAVE =====================
   const navLinks = $("#nav_list a, #mobile_nav_list a");
   navLinks.on("click", function (e) {
